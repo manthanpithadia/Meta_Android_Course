@@ -9,9 +9,34 @@
  * valnewEq = 6+a // the result will be = 12
  */
 fun main() {
-    val loopPractice = LoopPractice()
-    loopPractice.triangleShape4()
-    println(factorial(6))
+    try {
+        someFunction()
+        println("Will not be printed")
+        } catch (e: Throwable) {
+        println("Caught $e") // Caught MyError: Some message
+        }
+    println("Code continues...")
+}
+
+// Exception
+fun exception(){
+    try{
+        val num:Int = "ABC".toInt()
+    }
+    catch (t: Throwable){
+     println("Caught ${t.message}")
+    }
+    println("Code continues...")
+}
+
+class MyError: Throwable("Some message")
+
+ fun someFunction(){
+    for(i in 1..1000000000){
+        if(i>10) throw MyError(); // some condition to break the loop, it works as break
+        print(i)
+    }
+    println("Will not be printed")
 }
 
 fun learString(){
