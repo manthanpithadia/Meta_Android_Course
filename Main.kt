@@ -8,14 +8,11 @@
  * val eq = 6 + a++ // the result will be 11 and then a will be = 6
  * valnewEq = 6+a // the result will be = 12
  */
-
 fun main() {
     val loopPractice = LoopPractice()
     loopPractice.triangleShape4()
+    println(factorial(6))
 }
-
-
-
 
 fun learString(){
 //    string with multiple line: use """
@@ -35,4 +32,9 @@ fun printScore(): Pair<Int,Int>{
 
     return Pair(totalScore,averageScore)
     //output: Total Score: 257, Total Average: 85
+}
+
+fun factorial(number: Int): Int{
+    if(number<=1) return 1
+    return factorial(number-1) * number
 }
