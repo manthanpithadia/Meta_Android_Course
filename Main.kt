@@ -8,14 +8,14 @@
  * val eq = 6 + a++ // the result will be 11 and then a will be = 6
  * valnewEq = 6+a // the result will be = 12
  */
+
 fun main() {
-    try {
-        someFunction()
-        println("Will not be printed")
-        } catch (e: Throwable) {
-        println("Caught $e") // Caught MyError: Some message
-        }
-    println("Code continues...")
+    println("Please Enter Id:")
+    val id:Int = readln().toInt()
+    println(getStudentById(id))
+    println("Please Enter Name:")
+    val name:String = readln()
+    println(searchInStudents(name)?:"The student is not found")
 }
 
 // Exception
